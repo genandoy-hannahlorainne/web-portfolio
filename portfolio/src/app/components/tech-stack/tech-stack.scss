@@ -6,7 +6,35 @@
 
 .page-title {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+}
+
+.skills-category {
+  margin-bottom: 4rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.category-title {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--primary);
+    border: 2px solid var(--border);
+  }
 }
 
 .tech-grid {
@@ -17,18 +45,56 @@
 }
 
 .tech-category {
-  h3 {
+  h4 {
     color: var(--primary);
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 3px solid var(--border);
+    font-size: 1.3rem;
   }
 }
 
 .tech-items {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.tech-logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: white;
+  border: 3px solid var(--border);
+  box-shadow: 3px 3px 0px var(--border);
+  transition: all 0.2s;
+  min-width: 100px;
+  
+  img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+  
+  span {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text);
+    text-align: center;
+  }
+  
+  &:hover {
+    background: var(--primary);
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px var(--border);
+    
+    span {
+      color: white;
+    }
+  }
 }
 
 .tech-tag {
@@ -48,9 +114,55 @@
   }
 }
 
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.soft-skill-card {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  transition: all 0.3s;
+  
+  &:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0px var(--border);
+  }
+  
+  .skill-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin: 0 auto 1.5rem;
+    display: block;
+  }
+  
+  h4 {
+    color: var(--primary);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .tech-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+  
+  .soft-skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .category-title {
+    font-size: 1.5rem;
   }
 }
