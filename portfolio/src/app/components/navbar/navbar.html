@@ -1,11 +1,11 @@
 <nav class="navbar">
   <div class="container">
     <div class="nav-content">
-      <a href="#about" class="logo">HL</a>
+      <a routerLink="/" class="logo">HL</a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#tech-stack">Tech Stack</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">About</a></li>
+        <li><a routerLink="/tech-stack" routerLinkActive="active">Tech Stack</a></li>
+        <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
       </ul>
     </div>
   </div>
