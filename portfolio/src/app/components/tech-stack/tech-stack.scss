@@ -2,6 +2,8 @@
   background: linear-gradient(135deg, #fef9f3 0%, #f5e6ff 100%);
   padding: 6rem 0;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .page-title {
@@ -20,7 +22,7 @@
 .category-title {
   font-size: 2rem;
   color: var(--primary);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
   position: relative;
   
@@ -37,9 +39,22 @@
   }
 }
 
+.skills-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 2rem auto 2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text);
+  padding: 1.5rem;
+  background: white;
+  border: 3px solid var(--border);
+  box-shadow: 4px 4px 0px var(--border);
+}
+
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -116,7 +131,7 @@
 
 .soft-skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -149,6 +164,16 @@
     color: var(--text);
     line-height: 1.6;
     margin: 0;
+  }
+}
+
+@media (max-width: 968px) {
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .soft-skills-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
