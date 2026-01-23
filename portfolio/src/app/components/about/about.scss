@@ -85,39 +85,32 @@
     color: var(--primary-dark);
     margin-bottom: 1rem;
     min-height: 2.5rem;
-    display: flex;
-    align-items: center;
-    gap: 2px;
   }
   
   .typing-demo {
     display: inline-block;
+    animation: typing 4s steps(37) infinite;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 4s steps(35) infinite;
-  }
-  
-  .intro::after {
-    content: '';
-    display: inline-block;
-    width: 3px;
-    height: 1.5rem;
-    background: var(--primary-dark);
-    animation: blink .7s step-end infinite;
+    
+    .cursor {
+      animation: blink .7s step-end infinite;
+      margin-left: 2px;
+    }
   }
   
   @keyframes typing {
     0%, 100% {
-      width: 0;
+      width: 0
     }
     30%, 70% {
-      width: 100%;
+      width: 100%
     }
   }
       
   @keyframes blink {
     50% {
-      opacity: 0;
+      opacity: 0
     }
   }
   
