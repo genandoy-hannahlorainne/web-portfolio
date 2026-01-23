@@ -1,9 +1,12 @@
 <nav class="navbar">
   <div class="container">
     <div class="nav-content">
-      <a routerLink="/" class="logo">HL</a>
+      <a routerLink="/" class="logo">
+        <img src="assets/images/my-logo.png" alt="Hann Logo" />
+      </a>
       <ul class="nav-links">
-        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">About</a></li>
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+        <li><a routerLink="/about-me" routerLinkActive="active">About Me</a></li>
         <li><a routerLink="/tech-stack" routerLinkActive="active">Skills</a></li>
         <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
       </ul>

@@ -16,19 +16,33 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary);
-  padding: 0.5rem 1rem;
-  border: 3px solid var(--border);
-  background: white;
-  box-shadow: 4px 4px 0px var(--border);
+  color: var(--text);
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
   transition: all 0.2s;
   
+  img {
+    height: 60px;
+    width: auto;
+    display: block;
+  }
+  
+  span {
+    color: var(--text);
+  }
+  
   &:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px var(--border);
+    transform: none;
+    box-shadow: none;
     text-decoration: none;
+    opacity: 0.8;
   }
 }
 
