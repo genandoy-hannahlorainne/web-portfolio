@@ -167,27 +167,170 @@
   }
 }
 
-@media (max-width: 968px) {
+/* Tablet */
+@media (max-width: 1024px) {
   .tech-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
   }
   
   .soft-skills-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+  
+  .category-title {
+    font-size: 1.85rem;
+  }
+  
+  .skills-description {
+    font-size: 1.05rem;
+    padding: 1.35rem;
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
+  .tech-stack-section {
+    padding: 4rem 0;
+  }
+  
+  .page-title {
+    margin-bottom: 3rem;
+  }
+  
+  .skills-category {
+    margin-bottom: 3rem;
+  }
+  
   .tech-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    margin-top: 2rem;
   }
   
   .soft-skills-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .category-title {
+    font-size: 1.65rem;
+    
+    &::after {
+      width: 80px;
+    }
+  }
+  
+  .skills-description {
+    font-size: 1rem;
+    padding: 1.25rem;
+    line-height: 1.7;
+  }
+  
+  .tech-category h4 {
+    font-size: 1.2rem;
+  }
+  
+  .tech-items {
+    gap: 1.25rem;
+  }
+  
+  .tech-logo-item {
+    min-width: 90px;
+    padding: 0.9rem;
+    
+    img {
+      width: 45px;
+      height: 45px;
+    }
+    
+    span {
+      font-size: 0.8rem;
+    }
+  }
+  
+  .soft-skill-card {
+    padding: 2rem 1.5rem;
+    
+    .skill-icon {
+      width: 70px;
+      height: 70px;
+    }
+    
+    h4 {
+      font-size: 1.2rem;
+    }
+    
+    p {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .tech-stack-section {
+    padding: 3rem 0;
+  }
+  
+  .skills-category {
+    margin-bottom: 2.5rem;
   }
   
   .category-title {
     font-size: 1.5rem;
+    
+    &::after {
+      width: 60px;
+      height: 3px;
+    }
+  }
+  
+  .skills-description {
+    font-size: 0.95rem;
+    padding: 1.15rem;
+  }
+  
+  .tech-category h4 {
+    font-size: 1.15rem;
+  }
+  
+  .tech-items {
+    gap: 1rem;
+  }
+  
+  .tech-logo-item {
+    min-width: 80px;
+    padding: 0.8rem;
+    
+    img {
+      width: 40px;
+      height: 40px;
+    }
+    
+    span {
+      font-size: 0.75rem;
+    }
+  }
+  
+  .soft-skill-card {
+    padding: 1.75rem 1.25rem;
+    
+    .skill-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1.25rem;
+    }
+    
+    h4 {
+      font-size: 1.15rem;
+    }
+    
+    p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
   }
 }

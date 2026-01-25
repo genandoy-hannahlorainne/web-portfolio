@@ -1,15 +1,26 @@
 <nav class="navbar">
   <div class="container">
     <div class="nav-content">
-      <a routerLink="/" class="logo">
+      <a routerLink="/" class="logo" (click)="closeMenu()">
         <img src="assets/images/my-logo.png" alt="Hann Logo" />
       </a>
-      <ul class="nav-links">
-        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
-        <li><a routerLink="/about-me" routerLinkActive="active">About Me</a></li>
-        <li><a routerLink="/tech-stack" routerLinkActive="active">Skills</a></li>
-        <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+      
+      <button class="hamburger" 
+              [class.active]="isMenuOpen" 
+              (click)="toggleMenu()"
+              aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" [class.active]="isMenuOpen">
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a></li>
+        <li><a routerLink="/about-me" routerLinkActive="active" (click)="closeMenu()">About Me</a></li>
+        <li><a routerLink="/tech-stack" routerLinkActive="active" (click)="closeMenu()">Skills</a></li>
+        <li><a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">Projects</a></li>
       </ul>
     </div>
   </div>
 </nav>
+<div class="overlay" [class.active]="isMenuOpen" (click)="closeMenu()"></div>

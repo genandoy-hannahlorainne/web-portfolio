@@ -1,5 +1,17 @@
 main {
-  padding-top: 80px;
+  padding-top: 95px;
   margin: 0;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding-top: 75px;
+  }
 }

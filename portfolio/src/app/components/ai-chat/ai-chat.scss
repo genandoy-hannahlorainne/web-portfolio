@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  z-index: 1000;
+  z-index: 998;
 }
 
 .chat-toggle-btn {
@@ -275,23 +275,130 @@
 
 @media (max-width: 768px) {
   .ai-chat-container {
-    bottom: 1rem;
-    right: 1rem;
-  }
-  
-  .chat-window {
-    width: calc(100vw - 2rem);
-    max-width: 380px;
-    height: 450px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 998;
   }
   
   .chat-toggle-btn {
-    width: 55px;
-    height: 55px;
+    width: 56px;
+    height: 56px;
+    box-shadow: 3px 3px 0px var(--border);
+    
+    &:hover {
+      box-shadow: 4px 4px 0px var(--border);
+    }
+    
+    svg {
+      width: 26px;
+      height: 26px;
+    }
+  }
+  
+  .chat-window {
+    width: calc(100vw - 3rem);
+    max-width: 360px;
+    height: 480px;
+    bottom: 72px;
+    right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-chat-container {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+  
+  .chat-toggle-btn {
+    width: 52px;
+    height: 52px;
+    border: 2px solid var(--border);
+    box-shadow: 3px 3px 0px var(--border);
+    
+    &:hover {
+      transform: translate(-1px, -1px);
+      box-shadow: 4px 4px 0px var(--border);
+    }
+    
+    &:active {
+      transform: translate(1px, 1px);
+      box-shadow: 2px 2px 0px var(--border);
+    }
     
     svg {
       width: 24px;
       height: 24px;
+    }
+  }
+  
+  .chat-window {
+    width: calc(100vw - 2.5rem);
+    max-width: 100%;
+    height: 450px;
+    bottom: 68px;
+    right: 0;
+    left: 1.25rem;
+  }
+  
+  .chat-header {
+    padding: 0.9rem;
+    
+    .ai-avatar {
+      width: 36px;
+      height: 36px;
+      
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    
+    .header-text {
+      h3 {
+        font-size: 1rem;
+      }
+      
+      p {
+        font-size: 0.7rem;
+      }
+    }
+  }
+  
+  .chat-messages {
+    padding: 0.9rem;
+    gap: 0.9rem;
+  }
+  
+  .message-content {
+    padding: 0.7rem 0.95rem;
+    
+    p {
+      font-size: 0.88rem;
+    }
+    
+    .timestamp {
+      font-size: 0.68rem;
+    }
+  }
+  
+  .chat-input {
+    padding: 0.9rem;
+    gap: 0.45rem;
+    
+    input {
+      padding: 0.7rem;
+      font-size: 0.88rem;
+    }
+    
+    button {
+      width: 42px;
+      height: 42px;
+      
+      svg {
+        width: 18px;
+        height: 18px;
+      }
     }
   }
 }
