@@ -1,0 +1,67 @@
+<div class="ai-chat-container">
+  <!-- Chat Toggle Button -->
+  <button class="chat-toggle-btn" (click)="toggleChat()" [class.active]="isChatOpen">
+    <svg *ngIf="!isChatOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      <circle cx="9" cy="10" r="1"></circle>
+      <circle cx="12" cy="10" r="1"></circle>
+      <circle cx="15" cy="10" r="1"></circle>
+    </svg>
+    <svg *ngIf="isChatOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
+
+  <!-- Chat Window -->
+  <div class="chat-window" [class.open]="isChatOpen">
+    <div class="chat-header">
+      <div class="header-content">
+        <div class="ai-avatar">
+          <img src="assets/images/my-logo.png" alt="Hannah's Logo" />
+        </div>
+        <div class="header-text">
+          <h3>Ask About Hannah</h3>
+          <p>AI Assistant</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-messages">
+      <div *ngFor="let message of messages" 
+           class="message" 
+           [class.user-message]="message.isUser"
+           [class.ai-message]="!message.isUser">
+        <div class="message-content">
+          <p>{{ message.text }}</p>
+          <span class="timestamp">{{ message.timestamp | date:'short' }}</span>
+        </div>
+      </div>
+      
+      <div *ngIf="isLoading" class="message ai-message">
+        <div class="message-content">
+          <div class="typing-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input 
+        type="text" 
+        [(ngModel)]="userInput" 
+        (keypress)="handleKeyPress($event)"
+        placeholder="Ask me about Hannah's skills, projects, or experience..."
+        [disabled]="isLoading"
+      />
+      <button (click)="sendMessage()" [disabled]="!userInput.trim() || isLoading">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
