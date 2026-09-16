@@ -165,8 +165,9 @@
 
 .education-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: minmax(0, 920px);
   gap: 2rem;
+  justify-content: center;
 }
 
 .education-card {
@@ -191,8 +192,7 @@
 
 .education-header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
   margin-bottom: 1.5rem;
   padding-top: 1rem;
@@ -210,7 +210,11 @@
   
   .education-info {
     width: 100%;
-    text-align: center;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
   }
   
   h3 {
@@ -337,7 +341,7 @@
 @media (max-width: 1200px) {
   .education-grid {
     grid-template-columns: 1fr;
-    max-width: 600px;
+    max-width: 920px;
     margin: 0 auto;
   }
 }
@@ -352,6 +356,9 @@
   }
   
   .education-header {
+    flex-direction: column;
+    align-items: center;
+
     .school-logo {
       width: 60px;
       height: 60px;
@@ -359,6 +366,12 @@
     
     h3 {
       font-size: 1.1rem;
+    }
+
+    .education-info {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
   }
 }
