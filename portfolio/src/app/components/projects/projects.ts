@@ -31,7 +31,7 @@ export class ProjectsComponent {
       role: 'Project Manager / Developer',
       liveUrl: 'https://studentcare.site/',
       githubUrl: 'https://github.com/PUPT-4seasons-2026/4seasons',
-      techStack: ['Angular', 'TypeScript', 'PHP', 'MySQL', 'SCSS'],
+      techStack: ['Angular', 'TypeScript', 'Laravel', 'MySQL', 'SCSS', 'Semaphore SMS', 'Docker', 'AWS Lightsail'],
     },
     {
       title: 'Pomodify',
@@ -42,7 +42,7 @@ export class ProjectsComponent {
       role: 'Project Manager / Developer',
       liveUrl: 'https://pomodify.site/',
       githubUrl: 'https://github.com/PUP-BSIT/project-g-cache',
-      techStack: ['Angular', 'TypeScript', 'SCSS', 'Firebase'],
+      techStack: ['Angular', 'TypeScript', 'Spring Boot', 'Java', 'PostgreSQL', 'SCSS', 'PWA', 'Service Workers', 'GitHub Actions', 'Swagger'],
     },
     {
       title: 'PawSight',
