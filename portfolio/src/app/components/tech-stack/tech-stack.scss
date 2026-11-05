@@ -334,3 +334,73 @@
     }
   }
 }
+
+/* Editorial skills treatment */
+.tech-stack-section {
+  background: var(--bg);
+  display: block;
+  padding-top: 8rem;
+}
+
+.category-title {
+  color: var(--text);
+  font-size: 2.2rem;
+  text-align: left;
+
+  &::after { display: none; }
+}
+
+.skills-description {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: var(--muted);
+  margin: 0 0 2rem;
+  max-width: 760px;
+  padding: 0;
+  text-align: left;
+}
+
+.tech-grid,
+.soft-skills-grid {
+  gap: 1rem;
+}
+
+.tech-category,
+.soft-skill-card {
+  box-shadow: none;
+}
+
+.tech-category h4,
+.soft-skill-card h4 {
+  color: var(--text);
+}
+
+.tech-logo-item {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: none;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    background: var(--surface);
+    border-color: var(--primary);
+    box-shadow: none;
+    transform: translateY(-3px);
+
+    span { color: var(--text); }
+  }
+}
+
+.soft-skill-card {
+  text-align: left;
+
+  .skill-icon {
+    height: 52px;
+    margin: 0 0 1rem;
+    width: 52px;
+  }
+
+  p { color: var(--muted); }
+}

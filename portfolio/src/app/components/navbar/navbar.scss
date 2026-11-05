@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   background: white;
-  border-bottom: 3px solid var(--border);
+  border-bottom: 1px solid var(--border);
   z-index: 1000;
   padding: 1rem 0;
   -webkit-backface-visibility: hidden;
@@ -187,8 +187,8 @@
   a {
     color: var(--text);
     font-weight: 600;
-    padding: 0.5rem 1rem;
-    border: 3px solid transparent;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid transparent;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -ms-transition: all 0.2s;
@@ -198,16 +198,14 @@
     -webkit-tap-highlight-color: transparent;
     
     &:hover {
-      border-color: var(--border);
-      background: var(--primary);
-      color: white;
+      border-bottom-color: var(--primary);
+      color: var(--primary);
       text-decoration: none;
     }
     
     &.active {
-      border-color: var(--border);
-      background: var(--primary);
-      color: white;
+      border-bottom-color: var(--primary);
+      color: var(--primary);
     }
   }
 }

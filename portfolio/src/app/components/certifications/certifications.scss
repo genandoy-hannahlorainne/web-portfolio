@@ -1,0 +1,257 @@
+.certifications-section {
+  background: var(--bg);
+  padding: 6rem 0;
+  min-height: 100vh;
+}
+
+.page-title {
+  margin-bottom: 1rem;
+  text-align: left;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: var(--primary);
+    border: 2px solid var(--border);
+  }
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text);
+  opacity: 0.8;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+  text-align: left;
+  max-width: 800px;
+}
+
+/* List */
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 2rem;
+}
+
+.cert-row {
+  display: grid;
+  grid-template-columns: 2.5rem 80px 1fr auto;
+  align-items: center;
+  gap: 1.75rem;
+  padding: 1.5rem 2rem;
+  border-bottom: 2px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  background: var(--bg);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+
+  &:first-child {
+    border-top: 2px solid var(--border);
+  }
+
+  &:hover {
+    background: var(--card-bg, #f9f9f7);
+    transform: translateX(4px);
+
+    .cert-arrow {
+      transform: translateX(4px);
+      opacity: 1;
+    }
+
+    .cert-title {
+      color: var(--primary);
+    }
+  }
+
+  // Remove card box styles that conflict with the row layout
+  border-left: none;
+  border-right: none;
+  box-shadow: none;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+/* Index number */
+.cert-index {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--muted, #999);
+  letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+/* Logo */
+.cert-logo-wrapper {
+  width: 80px;
+  height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px solid var(--border);
+  background: #fff;
+}
+
+.cert-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.cert-logo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+
+  svg {
+    width: 32px;
+    height: 32px;
+    color: var(--primary);
+    opacity: 0.6;
+  }
+}
+
+/* Info */
+.cert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.cert-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text);
+  line-height: 1.4;
+  transition: color 0.2s ease;
+  white-space: normal;
+}
+
+.cert-date {
+  font-size: 0.85rem;
+  color: var(--muted, #888);
+  font-weight: 500;
+}
+
+/* Arrow */
+.cert-arrow {
+  flex-shrink: 0;
+  opacity: 0.4;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .cert-row {
+    grid-template-columns: 2rem 70px 1fr auto;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .cert-logo-wrapper {
+    width: 70px;
+    height: 52px;
+  }
+
+  .cert-title {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .certifications-section {
+    padding: 4rem 0;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  .cert-row {
+    grid-template-columns: 2rem 60px 1fr auto;
+    gap: 1rem;
+    padding: 1.1rem 1.25rem;
+  }
+
+  .cert-logo-wrapper {
+    width: 60px;
+    height: 46px;
+  }
+
+  .cert-title {
+    font-size: 0.95rem;
+  }
+
+  .cert-date {
+    font-size: 0.8rem;
+  }
+
+  .cert-arrow {
+    opacity: 0.3;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .certifications-section {
+    padding: 3rem 0;
+  }
+
+  .page-title {
+    font-size: 1.75rem;
+  }
+
+  .cert-row {
+    grid-template-columns: 1.75rem 50px 1fr;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .cert-logo-wrapper {
+    width: 50px;
+    height: 40px;
+  }
+
+  .cert-arrow {
+    display: none;
+  }
+
+  .cert-title {
+    font-size: 0.9rem;
+  }
+}

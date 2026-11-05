@@ -1,0 +1,52 @@
+<section id="certifications" class="certifications-section">
+  <div class="container">
+    <h2 class="page-title">Certifications</h2>
+    <p class="intro-text">
+      A collection of seminars, workshops, and courses that have shaped my technical
+      knowledge and professional growth in IT.
+    </p>
+
+    <div class="cert-list" aria-label="Certifications">
+      <a
+        *ngFor="let cert of certifications; let i = index"
+        [href]="cert.link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="cert-row card"
+        [attr.aria-label]="cert.title + ' — ' + cert.date + ', opens certificate'"
+      >
+        <span class="cert-index">{{ (i + 1).toString().padStart(2, '0') }}</span>
+
+        <div class="cert-logo-wrapper">
+          <img
+            *ngIf="cert.logo"
+            [src]="cert.logo"
+            [alt]="cert.alt"
+            class="cert-logo"
+            loading="lazy"
+          />
+          <div *ngIf="!cert.logo" class="cert-logo-placeholder" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="6"></circle>
+              <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="cert-info">
+          <h3 class="cert-title">{{ cert.title }}</h3>
+          <span class="cert-date">{{ cert.date }}</span>
+        </div>
+
+        <span class="cert-arrow" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>

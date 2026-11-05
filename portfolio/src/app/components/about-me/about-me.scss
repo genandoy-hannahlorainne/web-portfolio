@@ -332,3 +332,95 @@
     }
   }
 }
+
+/* Editorial inner-page treatment */
+.about-me-section {
+  padding-top: 8rem;
+}
+
+.page-title {
+  letter-spacing: -0.03em;
+}
+
+.about-intro .intro-content {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+
+  h3 {
+    color: var(--text);
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  p {
+    color: var(--muted);
+    max-width: 760px;
+    text-align: left;
+  }
+}
+
+.social-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  box-shadow: none;
+  padding: 0.65rem 1rem;
+
+  &:hover {
+    box-shadow: none;
+    transform: translateY(-2px);
+  }
+}
+
+.education-section {
+  border-bottom: 0;
+  border-top: 1px solid var(--border);
+}
+
+.education-card {
+  box-shadow: none;
+  border-radius: 0;
+  border-left: 2px solid var(--primary);
+
+  &::before { display: none; }
+}
+
+.education-header .school-logo {
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.education-header .education-info h3,
+.education-content h4 {
+  color: var(--text);
+}
+
+.education-header .year {
+  background: transparent;
+  border: 1px solid var(--border);
+  box-shadow: none;
+  color: var(--muted);
+}
+
+.education-content .role-item {
+  background: transparent;
+  border-left: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.education-content .competencies {
+  background: transparent;
+  border: 1px solid var(--border);
+  box-shadow: none;
+
+  strong { color: var(--text); text-align: left; }
+}
+
+.education-content .competency-tag {
+  background: transparent;
+  border: 1px solid var(--border);
+  box-shadow: none;
+  border-radius: 999px;
+}
